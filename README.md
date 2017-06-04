@@ -4,6 +4,20 @@
 
 Temp::Path - Make a temporary path, file, or directory
 
+# TABLE OF CONTENTS
+
+- [SYNOPSIS](#synopsis)
+- [DESCRIPTION](#description)
+- [EXPORTED TERMS](#exported-terms)
+    - [`&amp;term:&lt;make-temp-path&gt;`](#termmake-temp-path)
+    - [`&amp;term:&lt;make-temp-dir&gt;`](#termmake-temp-dir)
+- [DETAILS OF DELETION](#details-of-deletion)
+- [SEE ALSO](#see-also)
+- [REPOSITORY](#repository)
+- [BUGS](#bugs)
+- [AUTHOR](#author)
+- [LICENSE](#license)
+
 # SYNOPSIS
 
 ```perl6
@@ -71,7 +85,8 @@ Defined as:
 Creates an [`IO::Path`](https://docs.perl6.org/type/IO::Path) object pointing
 to a path inside
 [`$*TMPDIR`](https://docs.perl6.org/language/variables#index-entry-%24%2ATMPDIR)
-that will be deleted (see `DETAILS OF DELETION` section below).
+that will be deleted (see [DETAILS OF DELETION](#details-of-deletion)
+section below).
 
 Unless `:$chmod` or `:$content` are given, no files will be created. If
 `:$chmod` is given a file containing `:$content` (or empty, if no `:$content` is
@@ -102,7 +117,8 @@ Defined as:
 
 Creates a directory inside
 [`$*TMPDIR`](https://docs.perl6.org/language/variables#index-entry-%24%2ATMPDIR)
-that will be deleted (see `DETAILS OF DELETION` section below) and returns the
+that will be deleted (see [DETAILS OF DELETION](#details-of-deletion)
+section below) and returns the
 [`IO::Path`](https://docs.perl6.org/type/IO::Path) object pointing to it.
 
 If `:$chmod` is provided, the directory will be created with that mode.
@@ -134,7 +150,7 @@ still give you an `IO::Path` with `Temp::Path::AutoDel` mixed in due to how
 `IO::Path` methods create new objects, but *that* new object created by
 '.sibling' won't be deleted, because *you* created it and not the module.
 
-## SEE ALSO
+# SEE ALSO
 
 There's [`File::Temp`](https://modules.perl6.org/repo/File::Temp) module, but I
 advise against using it.
