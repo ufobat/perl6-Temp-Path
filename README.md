@@ -23,8 +23,6 @@ Temp::Path - Make a temporary path, file, or directory
 ```perl6
 use Temp::Path;
 
-use Temp::Path;
-
 with make-temp-path {
         .spurt: 'meows';
     say .slurp: :bin; # OUTPUT: «Buf[uint8]:0x<6d 65 6f 77 73>␤»
@@ -46,6 +44,7 @@ with make-temp-dir {
     $*TMPDIR.say;
     # OUTPUT:
     # "/tmp/F5AA112627DA7B59C038900A3C8C7CB05477DCCCEADF2DC447EC304017A1009E".IO
+
     say make-temp-path;
     # OUTPUT:
     # "/tmp/F5AA112627DA7B59C038900A3C8C7CB05477DCCCEADF2DC447EC304017A1009E/…
