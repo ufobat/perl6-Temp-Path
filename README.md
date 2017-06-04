@@ -74,10 +74,7 @@ Defined as:
 
 ```perl6
     sub term:<make-temp-path> (
-               :$content where Any|Blob:D|Cool:D,
-        Int    :$chmod,
-        Bool:D :$dir = False,
-        --> IO::Path:D
+        :$content where Any|Blob:D|Cool:D, Int :$chmod --> IO::Path:D
     )
 ```
 
