@@ -137,7 +137,7 @@ still give you an `IO::Path` with `Temp::Path::AutoDel` mixed in due to how
 ## SEE ALSO
 
 There's [`File::Temp`](https://modules.perl6.org/repo/File::Temp) module, but I
-strongly advise against using it.
+advise against using it.
 
 ----
 
