@@ -10,7 +10,10 @@ END { $GOODS.send: ('nuke',); await $GOODS.closed }
 {
     my %goods is SetHash; # state is busted in whenever; RT#131508
     start react whenever $GOODS -> ($_, $path?) {
-        sub nuke-path (IO() $_) { .d ?? .&rmtree !! .e && .unlink.so;        }
+        sub nuke-path (IO() $p) {
+            CATCH { when X::IO::Dir { $p.rmdir.so } }
+            $p.d ?? $p.&rmtree !! $p.e && $p.unlink
+        }
         when 'add'    {                 %goods{$path}++                      }
         when 'forget' {                 %goods{$path}:delete                 }
         when 'delete' {   nuke-path     %goods{$path}:delete:k               }
@@ -44,7 +47,7 @@ sub make-rand-path (--> IO::Path) {
 }
 
 sub term:<make-temp-path> (
-    :$content where Any|Blob|Cool, Int :$chmod --> IO::Path:D
+    :$content where Any|Blob:D|Cool:D, Int :$chmod --> IO::Path:D
 ) is export
 {
     $GOODS.send: ('add', (my \p = make-rand-path).absolute);

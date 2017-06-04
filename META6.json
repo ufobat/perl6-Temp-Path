@@ -3,11 +3,12 @@
     "name"         : "Temp::Path",
     "license"      : "Artistic-2.0",
     "version"      : "1.001001",
-    "description"  : "Get a temporary path, optionally creating a temp directory",
+    "description"  : "Make a temporary path, file, or directory",
     "tags"         : [ "filesystem" ],
     "depends"      : [
         "Digest::SHA",
-        "File::Directory::Tree"
+        "File::Directory::Tree",
+        "RakudoPrereq"
     ],
     "test-depends" : [
         "Testo",
