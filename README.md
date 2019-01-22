@@ -146,7 +146,7 @@ still give you an `IO::Path` with `Temp::Path::AutoDel` mixed in due to how
 `IO::Path` methods create new objects, but *that* new object created by
 '.sibling' won't be deleted, when the object gets garbage collected, because
 *you* created it and not the module. Of course, when the parent directory, that
-was crated by this module gets deleted, all the all `.siblings` on disk get removed.
+was crated by this module gets deleted, all the `.siblings` on disk get removed.
 
 ----
 
