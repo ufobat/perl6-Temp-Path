@@ -20,7 +20,7 @@ END { $GOODS.send: ('nuke',); await $GOODS.closed }
     }
 }
 
-sub make-rand-path (Str $prefix, Str $suffix --> IO::Path) {
+sub make-rand-path (Str:D $prefix, Str:D $suffix --> IO::Path) {
     my $p = $*TMPDIR;
     # XXX TODO .resolve is broken on Windows in Rakudo; .resolve for all OSes
     # when it is fixed
