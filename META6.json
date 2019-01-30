@@ -1,6 +1,7 @@
 {
   "authors" : [
-    "Zoffix Znet"
+    "Zoffix Znet",
+    "Martin Barth (ufobat)"
   ],
   "build-depends" : [ ],
   "depends" : [
@@ -17,7 +18,7 @@
   "resources" : [ ],
   "source-url" : "https://github.com/ufobat/perl6-Temp-Path.git",
   "support" : {
-    "source" : "https://github.com/zoffixznet/perl6-Temp-Path.git"
+    "source" : "https://github.com/ufobat/perl6-Temp-Path.git"
   },
   "tags" : [
     "filesystem"
