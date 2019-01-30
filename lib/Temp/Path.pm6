@@ -1,4 +1,4 @@
-unit module Temp::Path:ver<1.001006>;
+unit module Temp::Path:ver<1.001007>;
 
 use Digest::SHA;
 use File::Directory::Tree;
