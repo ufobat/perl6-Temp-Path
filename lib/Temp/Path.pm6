@@ -4,7 +4,7 @@ use Digest::SHA;
 use File::Directory::Tree;
 
 my Channel $GOODS .= new;
-END { $GOODS.send: ('nuke',); await $GOODS.closed }
+END { with $GOODS { .send: ('nuke',); await $_.closed } }
 {
     my %goods is SetHash; # state is busted in whenever; RT#131508
     start react whenever $GOODS -> ($_, $path?) {
