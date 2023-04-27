@@ -5,7 +5,7 @@
   ],
   "build-depends" : [ ],
   "depends" : [
-    "Digest::SHA",
+    "Digest::SHA2",
     "File::Directory::Tree"
   ],
   "description" : "Make a temporary path, file, or directory",
@@ -27,5 +27,5 @@
     "Testo",
     "Test::META"
   ],
-  "version" : "1.001007"
+  "version" : "1.001008"
 }

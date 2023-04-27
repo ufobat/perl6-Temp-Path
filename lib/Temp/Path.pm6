@@ -1,6 +1,6 @@
-unit module Temp::Path:ver<1.001007>;
+unit module Temp::Path:ver<1.001008>;
 
-use Digest::SHA;
+use Digest::SHA2;
 use File::Directory::Tree;
 
 my Channel $GOODS .= new;
