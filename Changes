@@ -2,7 +2,7 @@ Revision history for Temp-Path
 
 {{$NEXT}}
 
-1.001008  2022-12-11T13:42:23+01:00
+1.001008  2023-04-29T10:33:48+02:00
     - migrate to actual Digest::SHA2
     - remove travis CI
     - add Gihub native CI/CD workflow
